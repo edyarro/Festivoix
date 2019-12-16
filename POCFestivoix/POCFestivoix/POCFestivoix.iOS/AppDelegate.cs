@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Plugin.FirebasePushNotification;
 using UIKit;
 
 namespace POCFestivoix.iOS
@@ -24,6 +25,8 @@ namespace POCFestivoix.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
+
+            FirebasePushNotificationManager.Initialize(options);
 
             return base.FinishedLaunching(app, options);
         }
