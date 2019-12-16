@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using ObjCRuntime;
 using Plugin.FirebasePushNotification;
 using UIKit;
 
@@ -29,6 +30,38 @@ namespace POCFestivoix.iOS
             FirebasePushNotificationManager.Initialize(options);
 
             return base.FinishedLaunching(app, options);
+        }
+
+        public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
+        {
+            FirebasePushNotificationManager.DidRegisterRemoteNotifications(deviceToken);
+        }
+
+        /// <summary>
+        /// FailedToRegisterForRemoteNotifications
+        /// </summary>
+        /// <param name="application"></param>
+        /// <param name="error"></param>
+        public override void FailedToRegisterForRemoteNotifications(UIApplication application, NSError error)
+        {
+            base.FailedToRegisterForRemoteNotifications(application, error);
+            FirebasePushNotificationManager.RemoteNotificationRegistrationFailed(error);
+        }
+
+        /// <summary>
+        /// DidFailToContinueUserActivitiy
+        /// </summary>
+        /// <param name="application"></param>
+        /// <param name="userActivityType"></param>
+        /// <param name="error"></param>
+        public override void DidFailToContinueUserActivitiy(UIApplication application, string userActivityType, NSError error)
+        {
+            base.DidFailToContinueUserActivitiy(application, userActivityType, error);
+        }
+
+        public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)
+        {
+            base.DidReceiveRemoteNotification(application, userInfo, completionHandler);
         }
     }
 }
