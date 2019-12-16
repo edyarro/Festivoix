@@ -61,7 +61,18 @@ namespace POCFestivoix.iOS
 
         public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)
         {
-            base.DidReceiveRemoteNotification(application, userInfo, completionHandler);
+            FirebasePushNotificationManager.DidReceiveMessage(userInfo);
+        }
+
+        public override void OnActivated(UIApplication uiApplication)
+        {
+            FirebasePushNotificationManager.Connect();
+            base.OnActivated(uiApplication);
+        }
+
+        public override void DidEnterBackground(UIApplication uiApplication)
+        {
+            FirebasePushNotificationManager.DisConnect();
         }
     }
 }
