@@ -66,13 +66,13 @@ namespace POCFestivoix.iOS
 
         public override void OnActivated(UIApplication uiApplication)
         {
-            FirebasePushNotificationManager.Connect();
+           // FirebasePushNotificationManager.Connect();
             base.OnActivated(uiApplication);
         }
 
         public override void DidEnterBackground(UIApplication uiApplication)
         {
-            FirebasePushNotificationManager.DisConnect();
+          //  FirebasePushNotificationManager.DisConnect();
         }
     }
 }
