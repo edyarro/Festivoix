@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 using POCFestivoix.Models;
-using POCFestivoix.Views;
 using POCFestivoix.ViewModels;
 
 namespace POCFestivoix.Views
@@ -29,7 +23,8 @@ namespace POCFestivoix.Views
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var item = args.SelectedItem as Item;
+            Item item = args.SelectedItem as Item;
+
             if (item == null)
                 return;
 
@@ -37,11 +32,6 @@ namespace POCFestivoix.Views
 
             // Manually deselect item.
             ItemsListView.SelectedItem = null;
-        }
-
-        async void AddItem_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
         }
 
         protected override void OnAppearing()

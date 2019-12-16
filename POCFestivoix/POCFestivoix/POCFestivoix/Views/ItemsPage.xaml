@@ -7,11 +7,6 @@
              x:Class="POCFestivoix.Views.ItemsPage"
              Title="{Binding Title}"
              x:Name="BrowseItemsPage">
-
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="AddItem_Clicked" />
-    </ContentPage.ToolbarItems>
-
     <StackLayout>
         <ListView x:Name="ItemsListView"
                 ItemsSource="{Binding Items}"
@@ -24,12 +19,7 @@
                 ItemSelected="OnItemSelected">
             <d:ListView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
-                    <x:String>First Item</x:String>
-                    <x:String>Second Item</x:String>
-                    <x:String>Third Item</x:String>
-                    <x:String>Fourth Item</x:String>
-                    <x:String>Fifth Item</x:String>
-                    <x:String>Sixth Item</x:String>
+                    <x:String>Carte</x:String>
                 </x:Array>
             </d:ListView.ItemsSource>
             <ListView.ItemTemplate>
