@@ -1,6 +1,5 @@
 ﻿using Android.App;
 using Android.Content;
-using Android.Runtime;
 using Android.Support.V4.App;
 
 namespace POCFestivoix.Droid

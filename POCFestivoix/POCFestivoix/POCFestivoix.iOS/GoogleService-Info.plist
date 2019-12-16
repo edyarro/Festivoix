@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>462406969179-3hd4a27rurh9vfspndg59hknmn1uh1u3.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.462406969179-3hd4a27rurh9vfspndg59hknmn1uh1u3</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC6jmwVkw4bRItri4R7KchjgP-Su8IopmI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>462406969179</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.companyname.POCFestivoix</string>
+	<key>PROJECT_ID</key>
+	<string>pocfestivoix</string>
+	<key>STORAGE_BUCKET</key>
+	<string>pocfestivoix.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:462406969179:ios:3e9e3b9aa8e5f2508c9c7e</string>
+	<key>DATABASE_URL</key>
+	<string>https://pocfestivoix.firebaseio.com</string>
+</dict>
+</plist>
