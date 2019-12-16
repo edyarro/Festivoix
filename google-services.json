@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "462406969179",
+    "firebase_url": "https://pocfestivoix.firebaseio.com",
+    "project_id": "pocfestivoix",
+    "storage_bucket": "pocfestivoix.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462406969179:android:27ea7fb438f7b0d78c9c7e",
+        "android_client_info": {
+          "package_name": "com.companyname.pocfestivoix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462406969179-2m85a7k7vqfcdad52asisrtufthboq6s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3Of2IvQqouL-rzF7OKaQJxut-PtZ6K0s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462406969179-2m85a7k7vqfcdad52asisrtufthboq6s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

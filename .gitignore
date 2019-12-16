@@ -150,14 +150,16 @@ FakesAssemblies/
 /*.jmconfig
 /*.jtconfig
 [Tt]humbs.db
-Servicentre/Servicentre.Droid/Servicentre.Droid.csproj.bak
-Servicentre/Servicentre.iOS/Servicentre.iOS.csproj.bak
+POCFestivoix/POCFestivoix/POCFestivoix.Droid/POCFestivoix.Droid.csproj.bak
+POCFestivoix/POCFestivoix/POCFestivoix.iOS/POCFestivoix.iOS.csproj.bak
 .vs
-/Servicentre/Servicentre.iOS/Servicentre.iOS.csproj.user
-/Servicentre/Servicentre.Droid/Servicentre.Droid.csproj.user
+/POCFestivoix/POCFestivoix/POCFestivoix.iOS/POCFestivoix.iOS.csproj.user
+/POCFestivoix/POCFestivoix/POCFestivoix.Droid/POCFestivoix.Droid.csproj.user
 # CodeRush folder
 .cr/
-ServiceServicentreNet/WinTestWebAPI/WinTestWebAPI.exe
-/ServiceServicentreNet/.vs
-/Tutti Frutti 4.0/.vs
-/.vs
+/POCFestivoix/POCFestivoix/POCFestivoix.Android/obj
+/POCFestivoix/POCFestivoix/POCFestivoix.Android/bin
+/POCFestivoix/POCFestivoix/POCFestivoix.iOS/obj
+/POCFestivoix/POCFestivoix/POCFestivoix.iOS/bin
+/POCFestivoix/POCFestivoix/POCFestivoix/bin
+/POCFestivoix/POCFestivoix/POCFestivoix/obj
