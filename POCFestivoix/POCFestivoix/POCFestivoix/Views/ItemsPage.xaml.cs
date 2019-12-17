@@ -4,6 +4,7 @@ using Xamarin.Forms;
 
 using POCFestivoix.Models;
 using POCFestivoix.ViewModels;
+using Xamarin.Forms.Maps;
 
 namespace POCFestivoix.Views
 {
@@ -28,10 +29,7 @@ namespace POCFestivoix.Views
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
-
-            // Manually deselect item.
-            ItemsListView.SelectedItem = null;
+            await Navigation.PushAsync(new ItemDetailPage { BindingContext = new ItemDetailViewModel() });
         }
 
         protected override void OnAppearing()

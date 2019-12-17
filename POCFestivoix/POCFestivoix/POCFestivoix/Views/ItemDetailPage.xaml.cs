@@ -1,10 +1,6 @@
-﻿using System;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
-using POCFestivoix.Models;
-using POCFestivoix.ViewModels;
+using Xamarin.Forms.Maps;
 
 namespace POCFestivoix.Views
 {
@@ -13,27 +9,17 @@ namespace POCFestivoix.Views
     [DesignTimeVisible(false)]
     public partial class ItemDetailPage : ContentPage
     {
-        ItemDetailViewModel viewModel;
-
-        public ItemDetailPage(ItemDetailViewModel viewModel)
-        {
-            InitializeComponent();
-
-            BindingContext = this.viewModel = viewModel;
-        }
-
         public ItemDetailPage()
         {
             InitializeComponent();
 
-            var item = new Item
-            {
-                Text = "Item 1",
-                Description = "This is an item description."
-            };
+            this.map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(46.342946, -72.536535), Distance.FromMiles(5)));
 
-            viewModel = new ItemDetailViewModel(item);
-            BindingContext = viewModel;
+            this.map.Pins.Add(new Pin { Position = new Position(46.342946, -72.536535), Address = "800 Rue du Fleuve, Trois-Rivières, QC G9A 5L2", Label = "Festivoix" });
+            this.map.Pins.Add(new Pin { Position = new Position(46.342014, -72.537777), Label = "Poivre noir" });
+            this.map.Pins.Add(new Pin { Position = new Position(46.341954, -72.539401), Label = "Resto-Bar Faste-Fou" });
+            this.map.Pins.Add(new Pin { Position = new Position(46.342435, -72.537277), Label = "Sea Shack La Gamba" });
+            this.map.Pins.Add(new Pin { Position = new Position(46.344181, -72.537642), Label = "Le Buck : Pub Gastronomique" });
         }
     }
 }

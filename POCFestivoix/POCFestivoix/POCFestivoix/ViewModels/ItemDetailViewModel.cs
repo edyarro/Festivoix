@@ -1,16 +1,13 @@
-﻿using System;
-
-using POCFestivoix.Models;
+﻿using System.Collections.Generic;
 
 namespace POCFestivoix.ViewModels
 {
     public class ItemDetailViewModel : BaseViewModel
     {
-        public Item Item { get; set; }
-        public ItemDetailViewModel(Item item = null)
+        public IEnumerable<string> Items { get; set; }
+
+        public ItemDetailViewModel()
         {
-            Title = item?.Text;
-            Item = item;
         }
     }
 }
