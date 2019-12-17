@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plugin.Geolocator;
+using System;
 using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
@@ -41,6 +42,16 @@ namespace POCFestivoix.Views
             map.Pins.Add(new Pin { Position = new Position(46.341954, -72.539401), Label = "Resto-Bar Faste-Fou" });
             map.Pins.Add(new Pin { Position = new Position(46.342435, -72.537277), Label = "Sea Shack La Gamba" });
             map.Pins.Add(new Pin { Position = new Position(46.344181, -72.537642), Label = "Le Buck : Pub Gastronomique" });
+        }
+
+        private async void ButtonClicked(object sender, EventArgs e)
+        {
+            Plugin.Geolocator.Abstractions.IGeolocator locator = CrossGeolocator.Current;
+
+            Plugin.Geolocator.Abstractions.Position userPosition = await locator.GetPositionAsync();
+
+            this.map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(userPosition.Latitude, userPosition.Longitude), Distance.FromMiles(1)));
+
         }
     }
 }

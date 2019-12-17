@@ -7,21 +7,28 @@
              mc:Ignorable="d"
              x:Class="POCFestivoix.Views.ItemDetailPage"
              Title="{Binding Title}">
-    <map:Map x:Name="map"
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <map:Map x:Name="map"
              IsShowingUser="True">
-        <x:Arguments>
-            <map:MapSpan>
-                <x:Arguments>
-                    <map:Position>
-                        <x:Arguments>
-                            <x:Double>46.342946</x:Double>
-                            <x:Double>-72.536535</x:Double>
-                        </x:Arguments>
-                    </map:Position>
-                    <x:Double>0.01</x:Double>
-                    <x:Double>0.01</x:Double>
-                </x:Arguments>
-            </map:MapSpan>
-        </x:Arguments>
-    </map:Map>
+            <x:Arguments>
+                <map:MapSpan>
+                    <x:Arguments>
+                        <map:Position>
+                            <x:Arguments>
+                                <x:Double>46.342946</x:Double>
+                                <x:Double>-72.536535</x:Double>
+                            </x:Arguments>
+                        </map:Position>
+                        <x:Double>0.01</x:Double>
+                        <x:Double>0.01</x:Double>
+                    </x:Arguments>
+                </map:MapSpan>
+            </x:Arguments>
+        </map:Map>
+        <Button Grid.Row="1" HeightRequest="50" Text="Get user position" Clicked="ButtonClicked" BackgroundColor="AliceBlue"/>
+    </Grid>
 </ContentPage>
