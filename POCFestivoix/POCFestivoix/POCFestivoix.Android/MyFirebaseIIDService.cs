@@ -1,7 +1,6 @@
-﻿
-using System;
-using Android.App;
+﻿using Android.App;
 using Firebase.Iid;
+using Firebase.Messaging;
 
 namespace POCFestivoix.Droid
 {

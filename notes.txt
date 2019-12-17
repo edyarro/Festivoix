@@ -1,3 +1,27 @@
 token: android tablet: esA6FvrRBnE:APA91bFO8HSIKiEh4XLNSYQiCj2O-jokHwawc5T3VLu3377uUB_LJ5DpqFUSF8DOvmK7DZbgl9qyesas7ou8Gkw3wBmp6H7Q2Oo15XHJW57T2TaCbogQz4n-W2saE9EDTAfwPVNFx01I
 
 android phone drzuOjiIpKM:APA91bHwhSqH7mJg0VB0OcQvufHBklw2Xm8aGtn4g9d2HSJk59h_EVXQ-l_yGcRjIDwdT0TDcoLks4Kqkwzp1G-MTbK82JCX9ULoNVt0rQnBuUoxQZeJrF6PbbmvMroMiyph_9EXhWUg
+
+
+FCM post using postman
+Headers:
+Content-Type:application/json
+Authorization: "key=AAA..." (Firebase server key from firebase console)
+
+Body:
+
+ {
+      "to":"device registration token",
+      "collapse_key" : "type_a",
+      "notification" : {
+      	"body" : "Body of Your Notification",
+      	"title": "Title of Your Notification"
+      },
+      "data" : {
+      	"body" : "Body of Your Notification in Data",
+      	"title": "Title of Your Notification in Title",
+      	"key_1" : "Value for key_1",
+      	"key_2" : "Value for key_2"
+ }
+}
+
