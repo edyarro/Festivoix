@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 
@@ -13,20 +14,33 @@ namespace POCFestivoix.Views
         {
             InitializeComponent();
 
-            this.map.Pins.Add(new Pin { Position = new Position(46.342946, -72.536535), Label = "Festivoix" });
-            this.map.Pins.Add(new Pin { Position = new Position(46.342014, -72.537777), Label = "Poivre noir" });
-            this.map.Pins.Add(new Pin { Position = new Position(46.341954, -72.539401), Label = "Resto-Bar Faste-Fou" });
-            this.map.Pins.Add(new Pin { Position = new Position(46.342435, -72.537277), Label = "Sea Shack La Gamba" });
-            this.map.Pins.Add(new Pin { Position = new Position(46.344181, -72.537642), Label = "Le Buck : Pub Gastronomique" });
+            this.AddPins(this.map);
+
+            Polyline polyLine = new Polyline
+            {
+                StrokeColor = Color.Blue,
+                StrokeWidth = 12,
+                Geopath = {
+                    new Position(46.342946, -72.536535),
+                    new Position(46.342014, -72.537777),
+                    new Position(46.341954, -72.539401),
+                }
+            };
+
+            this.map.MapElements.Add(polyLine);
         }
 
         /// <summary>
-        /// MapMapClicked
+        /// AddPins
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void MapMapClicked(object sender, MapClickedEventArgs e)
+        /// <param name="map"></param>
+        private void AddPins(Map map)
         {
+            map.Pins.Add(new Pin { Position = new Position(46.342946, -72.536535), Label = "Festivoix" });
+            map.Pins.Add(new Pin { Position = new Position(46.342014, -72.537777), Label = "Poivre noir" });
+            map.Pins.Add(new Pin { Position = new Position(46.341954, -72.539401), Label = "Resto-Bar Faste-Fou" });
+            map.Pins.Add(new Pin { Position = new Position(46.342435, -72.537277), Label = "Sea Shack La Gamba" });
+            map.Pins.Add(new Pin { Position = new Position(46.344181, -72.537642), Label = "Le Buck : Pub Gastronomique" });
         }
     }
 }

@@ -8,9 +8,7 @@
              x:Class="POCFestivoix.Views.ItemDetailPage"
              Title="{Binding Title}">
     <map:Map x:Name="map"
-             IsShowingUser="True"
-             MoveToLastRegionOnLayoutChange="False" 
-             MapClicked="MapMapClicked">
+             IsShowingUser="True">
         <x:Arguments>
             <map:MapSpan>
                 <x:Arguments>
