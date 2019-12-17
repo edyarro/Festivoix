@@ -7,5 +7,23 @@
              mc:Ignorable="d"
              x:Class="POCFestivoix.Views.ItemDetailPage"
              Title="{Binding Title}">
-    <map:Map x:Name="map"/>
+    <map:Map x:Name="map"
+             IsShowingUser="True"
+             MoveToLastRegionOnLayoutChange="False" 
+             MapClicked="MapMapClicked">
+        <x:Arguments>
+            <map:MapSpan>
+                <x:Arguments>
+                    <map:Position>
+                        <x:Arguments>
+                            <x:Double>46.342946</x:Double>
+                            <x:Double>-72.536535</x:Double>
+                        </x:Arguments>
+                    </map:Position>
+                    <x:Double>0.01</x:Double>
+                    <x:Double>0.01</x:Double>
+                </x:Arguments>
+            </map:MapSpan>
+        </x:Arguments>
+    </map:Map>
 </ContentPage>

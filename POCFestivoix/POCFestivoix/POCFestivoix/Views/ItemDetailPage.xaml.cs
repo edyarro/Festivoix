@@ -13,13 +13,20 @@ namespace POCFestivoix.Views
         {
             InitializeComponent();
 
-            this.map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(46.342946, -72.536535), Distance.FromMiles(5)));
-
-            this.map.Pins.Add(new Pin { Position = new Position(46.342946, -72.536535), Address = "800 Rue du Fleuve, Trois-Rivières, QC G9A 5L2", Label = "Festivoix" });
+            this.map.Pins.Add(new Pin { Position = new Position(46.342946, -72.536535), Label = "Festivoix" });
             this.map.Pins.Add(new Pin { Position = new Position(46.342014, -72.537777), Label = "Poivre noir" });
             this.map.Pins.Add(new Pin { Position = new Position(46.341954, -72.539401), Label = "Resto-Bar Faste-Fou" });
             this.map.Pins.Add(new Pin { Position = new Position(46.342435, -72.537277), Label = "Sea Shack La Gamba" });
             this.map.Pins.Add(new Pin { Position = new Position(46.344181, -72.537642), Label = "Le Buck : Pub Gastronomique" });
+        }
+
+        /// <summary>
+        /// MapMapClicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MapMapClicked(object sender, MapClickedEventArgs e)
+        {
         }
     }
 }
